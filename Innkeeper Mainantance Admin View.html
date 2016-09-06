@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Request admin view</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="mockupstyle.css">
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a><div class="radio">
+  <label><input type="radio" name="optradio">Active</label>
+</div></a>
+
+<a><div class="radio">
+  <label><input type="radio" name="optradio">In-Progress</label>
+</div></a>
+
+<a><div class="radio ">
+  <label><input type="radio" name="optradio" >Complete</label>
+  </div></a>
+
+ <a> <div class="radio ">
+  <label><input type="radio" name="optradio" >All</label>
+</div></a>
+
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Filters</span>
+
+
+<div class= "container" id='aap'>
+<form class='form-inline'>
+<div class='row'>
+<div class='col-md-6'>
+	<div class='form-group'>
+
+<h2><label for='category'>Category</label></h2>
+<select class= 'form-control' id='category'>
+  
+   <option>Broken item</option>
+   < <option>Missing item</option>
+    <option>Request item</option>
+   </select>
+
+
+   
+   </div>
+   </div>
+  
+   <div class='form-group'>
+
+
+		<div class='col-md-6'>
+   <h2><label for='descript'>Description: </label></h2>
+		<textarea class='form-control' rows='3' id='descript'></textarea>
+</div>
+</div>
+
+<br>
+<br>
+<div class='container-fluid'>
+<div class='row'>
+
+<div class='col-sm-11'></div>
+<div class='col-sm-1'>	<button type="button" class="btn btn-success">Submit</button>	</div>
+</div>
+</div>
+		
+	</form>	
+
+
+		</div>
+		<br>
+ 
+<!-- dynamicly named -->
+ <h2>Maintance Requests:</h2>
+<div class='well'>
+	
+	<div class='container-fluid'>
+	<div class="row">
+  <div class="col-sm-2">Category</div>
+  <div class="col-sm-3">Description</div>
+  <div class="col-sm-3">Location</div>
+  <div class="col-sm-2">Start Date</div>
+
+  <div class="col-sm-2">Status</div>
+</div>
+
+<!-- make dynamic -->
+
+<div class='col-sm-2'>Missing Item</div>
+<div class="col-sm-3">Missing desk</div>
+<div class="col-sm-3">1234 Yolo cirlce</div>
+ <div class="col-sm-2">Jan 13 2016</div>
+
+<div class='col-sm-2'>
+<select class= 'form-control' id='status'>
+  
+   <option>Active</option>
+   < <option>In Progress</option>
+    <option>Complete</option>
+   </select>
+
+</div>
+	</div>
+</div>
+</div>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script src="mockuppanel.js"></script>
+</body>
+</html>
