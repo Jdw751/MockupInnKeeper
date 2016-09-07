@@ -24,15 +24,15 @@ function closeNav() {
 
 
 
-let categoryList = [];
-let descriptionList = [];
+var categoryList = [];
+var descriptionList = [];
 
 // document.getElementById("category").innerHTML = categoryList;
-document.getElementById("descript").innerHTML = descriptionList;
+// document.getElementById("descript").innerHTML = descriptionList;
 
 display = document.getElementById("category");
 
-let displayedList = ""
+var displayedList = ""
 
 
 function addToList(categoryID,descriptionID) {
@@ -45,6 +45,7 @@ function addToList(categoryID,descriptionID) {
 
  	alert(descriptionList);
  	
+ 	
  }
 
 
@@ -55,6 +56,9 @@ function displayMyList(){
 	let displayedList = "";
 	let listCount = descriptionList.length;
 
+	alert(listCount);
+
+
 
 	for(let i = 0; i < listCount; i++){
 
@@ -64,6 +68,7 @@ function displayMyList(){
 	}
 	 document.getElementById("requestList").innerHTML = displayedList;
 
+	 
 
 }
 
