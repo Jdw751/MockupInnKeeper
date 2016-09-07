@@ -1,3 +1,15 @@
+//tester functions
+
+// var x = document.getElementById("submitBtn");
+// x.addEventListener("click", tester);
+
+
+function tester() {
+
+    alert("test");
+}
+
+
 
 // slide out panel functions
 function openNav() {
@@ -10,41 +22,48 @@ function closeNav() {
 
 // add to list functions
 
-var list = [];
-
-document.getElementById("list").innerHTML = list;
-
-display = document.getElementById("list");
-
-var displayedList = ""
 
 
-function addToList(itemID) {
+let categoryList = [];
+let descriptionList = [];
 
-	var item = itemID.toString();
- 	list.push(item);
+// document.getElementById("category").innerHTML = categoryList;
+document.getElementById("descript").innerHTML = descriptionList;
+
+display = document.getElementById("category");
+
+let displayedList = ""
+
+
+function addToList(categoryID,descriptionID) {
+
+	let category = categoryID.toString();
+ 	categoryList.push(category);
+
+ 	let description = descriptionID.toString();
+ 	descriptionList.push(description);
+
+ 	alert(descriptionList);
  	
  }
 
-function removeFromList(indexToRemove){
-	list.splice(indexToRemove,1);
 
-}
 
 function displayMyList(){
 
 
-	var displayedList = "";
-	var listCount = list.length;
+	let displayedList = "";
+	let listCount = descriptionList.length;
 
 
-	for(var i = 0; i < listCount; i++){
+	for(let i = 0; i < listCount; i++){
 
-		displayedList += "<li>"+ list[i] + "  " +"<input type='checkbox'  onclick='removeFromList("+i+");displayMyList()'>" + "</li>";
+		displayedList += "<div class='container-fluid'>"+ "<div class='row'>"+"<div class='col-sm-4'>"+categoryList[i] + "</div> " +"<div class='container-fluid'>"+ "<div class='row'>"+"<div class='col-sm-4'>"+descriptionList[i] + "</div> " + "<div class='container-fluid'>"+ "<div class='row'>"+"<div class='col-sm-4'>"+Active + "</div> "+ "</div> " + "</div> "+ "<br> ";
 
 
 	}
-	 document.getElementById("list").innerHTML = displayedList;
+	 document.getElementById("requestList").innerHTML = displayedList;
 
 
 }
+

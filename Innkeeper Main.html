@@ -19,44 +19,41 @@
 
 
 
-<div class= "container" id='aap'>
+<div class= "container" id='aap' >
 <br>
 <br>
-<div class="well">
-<form class='form-inline'>
-<div class='row'>
-<div class='col-md-6'>
-	<div class='form-group'>
+<div class="well" tag='newRequest'>
+	<form class='form-inline'>
+		<div class='row'>
+			<div class='col-md-6'>
+				<div class='form-group'>
 
-<h2><label for='category'>Category</label></h2>
-<select class= 'form-control' id='category'>
+					<h2><label for='category'>Category</label></h2>
+					<select class= 'form-control' id='category' value=''>
+   						<option>Broken item</option>
+    					<option>Missing item</option>
+    					<option>Request item</option>
+   					</select>
+				</div>
+   			</div>
   
-   <option>Broken item</option>
-   < <option>Missing item</option>
-    <option>Request item</option>
-   </select>
-
-
-   
-   </div>
-   </div>
-  
-   <div class='form-group'>
+   		<div class='form-group'>
 
 
 		<div class='col-md-6'>
    <h2><label for='descript'>Description: </label></h2>
-		<textarea class='form-control' rows='3' id='descript'></textarea>
+		<textarea class='form-control' rows='3' id='descript' value=''></textarea>
 </div>
 </div>
 
 <br>
 <div class='container-fluid'>
-<div class='row'>
+	<div class='row'>
 
-<div class='col-sm-11'><button type="button" class="btn btn-danger">Cancel</button></div>
-<div class='col-sm-1'>	<button type="button" class="btn btn-success">Submit</button>	</div>
-</div>
+		<div class='col-sm-11'><button type="button" class="btn btn-danger">Cancel</button></div>
+<div class='col-sm-1'>	<button type="button" class="btn btn-success" onclick="addToList(document.getElementById('category').value,document.getElementById('descript').value)">Submit</button>	</div>
+		<!-- <div class='col-sm-1'>	<button type="button" class="btn btn-success" id="submitBtn">Submit</button></div> -->
+	</div>
 </div>
 		
 	</form>	
@@ -70,7 +67,7 @@
 <!-- dynamic naming -->
 <h2>Active Maintance Requests:</h2>
 
-<div class='well'>
+<div class='well' id='requestList'>
 	<div class='container-fluid'>
 		<div class="row">
 			<h3>
@@ -110,6 +107,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-
+<script src="mockuppanel.js"></script>
 </body>
 </html>
