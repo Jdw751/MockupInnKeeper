@@ -24,8 +24,8 @@ function closeNav() {
 
 
 
-var categoryList = [];
-var descriptionList = [];
+let categoryList = [];
+let descriptionList = [];
 
 // document.getElementById("category").innerHTML = categoryList;
 // document.getElementById("descript").innerHTML = descriptionList;
